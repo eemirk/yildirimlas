@@ -393,8 +393,13 @@
             var menuIcon = document.getElementById('menuIcon');
             menuBtn.addEventListener('click', function() {
                 var isOpen = mobileMenu.classList.contains('menu-open');
-                ;
-                menuIcon.className = isOpen ? 'ti ti-menu-2 text-xl' : 'ti ti-x text-xl';
+                if (isOpen) {
+                    mobileMenu.classList.remove('menu-open');
+                    menuIcon.className = 'ti ti-menu-2 text-xl';
+                } else {
+                    mobileMenu.classList.add('menu-open');
+                    menuIcon.className = 'ti ti-x text-xl';
+                }
             });
             var mobileLinks = document.querySelectorAll('.mobile-link');
             for (var i = 0; i < mobileLinks.length; i++) {
