@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(\\(Get-Command git -ErrorAction SilentlyContinue\\) | Select-Object Source)",
+      "PowerShell(winget list --name Git 2>$null)"
+    ]
+  }
+}

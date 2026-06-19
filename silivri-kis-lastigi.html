@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silivri Kış Lastiği | Kış Lastiği Satış ve Montaj</title>
+    <meta name="description" content="Silivri'de kış lastiği satış ve montaj hizmeti. Michelin, Bridgestone, Continental, Pirelli, Goodyear, Lassa, Petlas ve Hankook markaları. Lastik saklama hizmeti mevcuttur.">
+    <meta property="og:title" content="Silivri Kış Lastiği | Yıldırım Oto Lastik">
+    <meta property="og:description" content="Silivri'de kış lastiği satış, montaj ve saklama hizmeti. 20 yılı aşkın tecrübe ile güvenli kış sürüşü.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://yildirimotolastik.com/silivri-kis-lastigi.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'system-ui', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                            transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .reveal.revealed {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .reveal-d1 { transition-delay: 100ms; }
+            .reveal-d2 { transition-delay: 200ms; }
+            .reveal-d3 { transition-delay: 300ms; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .reveal { opacity: 1 !important; transform: none !important; }
+        }
+    
+        #mobileMenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+        #mobileMenu.menu-open {
+            max-height: 600px;
+            opacity: 1;
+        }
+        #mobileMenu .mobile-link {
+            opacity: 0;
+            transform: translateX(-12px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        #mobileMenu.menu-open .mobile-link {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        #mobileMenu.menu-open .mobile-link:nth-child(1) { transition-delay: 50ms; }
+        #mobileMenu.menu-open .mobile-link:nth-child(2) { transition-delay: 80ms; }
+        #mobileMenu.menu-open .mobile-link:nth-child(3) { transition-delay: 110ms; }
+        #mobileMenu.menu-open .mobile-link:nth-child(4) { transition-delay: 140ms; }
+        #mobileMenu.menu-open .mobile-link:nth-child(5) { transition-delay: 170ms; }
+        #mobileMenu.menu-open .mobile-link:nth-child(6) { transition-delay: 200ms; }
+        #mobileMenu.menu-open .mobile-link:nth-child(7) { transition-delay: 230ms; }
+        #mobileMenu.menu-open .mobile-link:nth-child(8) { transition-delay: 260ms; }
+        #mobileMenu.menu-open .mobile-link:nth-child(9) { transition-delay: 290ms; }
+        #mobileMenu.menu-open .mobile-link:nth-child(10) { transition-delay: 320ms; }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Yıldırım Oto Lastik",
+        "description": "Silivri'de kış lastiği satış, montaj ve saklama hizmeti sunan profesyonel lastik servisi.",
+        "url": "https://yildirimotolastik.com/silivri-kis-lastigi.html",
+        "telephone": "+905454368124",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ortaköy Mah. E-5 Yan Yol Üzeri No:42",
+            "addressLocality": "Silivri",
+            "addressRegion": "İstanbul",
+            "postalCode": "34570",
+            "addressCountry": "TR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 41.0801319,
+            "longitude": 28.2350693
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "08:00",
+                "closes": "19:00"
+            }
+        ],
+        "priceRange": "$$",
+        "image": "https://yildirimotolastik.com/assets/hero-image-v2.png",
+        "areaServed": ["Silivri", "Çatalca", "Büyükçekmece"]
+    }
+    </script>
+</head>
+<body class="bg-white text-zinc-900 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-xl border-b border-zinc-200">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="text-lg font-bold tracking-tight">
+                YILDIRIM<span class="text-orange-500">.</span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-6">
+                <a href="index.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">Ana Sayfa</a>
+                <a href="hizmetler.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">Hizmetler</a>
+                <a href="silivri-oto-lastik.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">Oto Lastik</a>
+                <a href="silivri-lastik-degisimi.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">Lastik Değişimi</a>
+                <a href="silivri-rot-balans.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">Rot Balans</a>
+                <a href="iletisim.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">İletişim</a>
+                <a href="tel:+905454368124" class="flex items-center gap-2 text-sm font-medium text-orange-500 hover:text-orange-600 transition-colors">
+                    <i class="ti ti-phone text-base"></i>
+                    0 545 436 81 24
+                </a>
+            </div>
+            <button id="menuBtn" class="lg:hidden p-2 text-zinc-500 hover:text-zinc-900 transition-colors" aria-label="Menüyü aç">
+                <i class="ti ti-menu-2 text-xl" id="menuIcon"></i>
+            </button>
+        </div>
+
+        <div id="mobileMenu" class="lg:hidden bg-white/95 backdrop-blur-xl border-b border-zinc-200">
+            <div class="px-6 py-5 flex flex-col gap-5">
+                <a href="index.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors mobile-link">Ana Sayfa</a>
+                <a href="hizmetler.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors mobile-link">Hizmetler</a>
+                <a href="silivri-oto-lastik.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors mobile-link">Oto Lastik</a>
+                <a href="silivri-lastik-degisimi.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors mobile-link">Lastik Değişimi</a>
+                <a href="silivri-rot-balans.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors mobile-link">Rot Balans</a>
+                <a href="silivri-kis-lastigi.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors mobile-link">Kış Lastiği</a>
+                <a href="silivri-yaz-lastigi.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors mobile-link">Yaz Lastiği</a>
+                <a href="silivri-lastikci.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors mobile-link">Lastikçi</a>
+                <a href="iletisim.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors mobile-link">İletişim</a>
+                <a href="tel:+905454368124" class="flex items-center gap-2 text-sm font-medium text-orange-500 mobile-link">
+                    <i class="ti ti-phone text-base"></i>
+                    0 545 436 81 24
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="bg-zinc-900 text-white py-24 pt-40 px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-[11px] uppercase tracking-[0.2em] text-orange-500 font-medium mb-4 reveal">KIŞ LASTİĞİ</p>
+                <h1 class="text-3xl md:text-5xl font-bold tracking-tighter leading-tight mb-6 reveal">
+                    Silivri'de Kış Lastiği Satış ve Montaj
+                </h1>
+                <p class="text-lg text-zinc-400 leading-relaxed max-w-2xl mx-auto mb-10 reveal">
+                    Kış aylarında güvenli sürüş için doğru lastik seçimi hayati önem taşır. Yıldırım Oto Lastik olarak Silivri ve çevresinde kış lastiği satış, montaj ve saklama hizmeti sunuyoruz.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center reveal">
+                    <a href="tel:+905454368124" class="inline-flex items-center justify-center gap-3 px-10 py-4 bg-orange-500 text-white font-bold text-lg rounded-xl hover:bg-orange-600 active:scale-[0.98] transition-all shadow-lg shadow-orange-500/30">
+                        <i class="ti ti-phone text-xl"></i>
+                        Hemen Ara
+                    </a>
+                    <a href="https://wa.me/905454368124" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/40 text-white font-medium rounded-xl hover:bg-white/10 active:scale-[0.98] transition-all">
+                        <i class="ti ti-brand-whatsapp text-xl"></i>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kış Lastiği Neden Önemli -->
+        <section class="py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                    <div class="reveal">
+                        <p class="text-[11px] uppercase tracking-[0.2em] text-orange-500 font-medium mb-4">GÜVENLİ SÜRÜŞ</p>
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tighter leading-tight mb-6">
+                            Kış Lastiği Neden Önemlidir?
+                        </h2>
+                        <div class="space-y-4 text-zinc-600 leading-relaxed">
+                            <p>
+                                Hava sıcaklığı 7 derecenin altına düştüğünde yaz lastiklerinin kauçuğu sertleşir ve yol tutuşu önemli ölçüde azalır. Kış lastikleri ise özel kauçuk bileşimi sayesinde soğuk havalarda bile esnek kalır, ıslak ve buzlu zeminlerde üstün kavrama gücü sağlar.
+                            </p>
+                            <p>
+                                Kış lastiklerinin dış yapısı, yaz lastiklerine kıyasla daha derin ve farklı desene sahiptir. Lameller adı verilen küçük yarıklar, kar ve buzda ekstra tutunma olanağı sunar. Bu sayede frenleme mesafesi kısalır, virajlarda kontrolü kaybetme riski azalır.
+                            </p>
+                            <p>
+                                Özellikle Silivri ve Trakya bölgesinde kış aylarında sık görülen don, buzlanma ve kar yağışı düşünüldüğünde, kış lastiği kullanmak sadece bir tercih değil, güvenliğiniz için bir zorunluluktur.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 reveal reveal-d1">
+                        <div class="bg-zinc-50 rounded-2xl p-6 border border-zinc-100">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-500 flex-shrink-0 mt-0.5">
+                                    <i class="ti ti-snowflake text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-1">Üstün Yol Tutuşu</h3>
+                                    <p class="text-sm text-zinc-500">7 derecenin altında yaz lastiklerine göre %30'a kadar daha iyi fren performansı sağlar.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-zinc-50 rounded-2xl p-6 border border-zinc-100">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-500 flex-shrink-0 mt-0.5">
+                                    <i class="ti ti-shield-check text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-1">Güvenli Frenleme</h3>
+                                    <p class="text-sm text-zinc-500">Islak, karlı ve buzlu zeminlerde frenleme mesafesini önemli ölçüde kısaltır.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-zinc-50 rounded-2xl p-6 border border-zinc-100">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-500 flex-shrink-0 mt-0.5">
+                                    <i class="ti ti-car text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-1">Araç Kontrolü</h3>
+                                    <p class="text-sm text-zinc-500">Viraj hakimiyeti ve stabiliteyi koruyarak trafik kazası riskini azaltır.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-zinc-50 rounded-2xl p-6 border border-zinc-100">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-500 flex-shrink-0 mt-0.5">
+                                    <i class="ti ti-calendar text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-1">Uzun Lastik Ömrü</h3>
+                                    <p class="text-sm text-zinc-500">Mevsime uygun lastik kullanmak, her iki takım lastiğin de ömrünü uzatır.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ne Zaman Değişmeli + Yasal Zorunluluk -->
+        <section class="py-24 px-6 bg-zinc-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    <div class="reveal">
+                        <p class="text-[11px] uppercase tracking-[0.2em] text-orange-500 font-medium mb-4">ZAMANLAMA</p>
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tighter leading-tight mb-6">
+                            Kış Lastiği Ne Zaman Takılmalı?
+                        </h2>
+                        <div class="space-y-4 text-zinc-600 leading-relaxed">
+                            <p>
+                                Kış lastiklerine geçiş için en uygun zaman Ekim ayı sonundan itibaren başlar. Hava sıcaklığı düzenli olarak 7 derecenin altına düştüğünde, kış lastiklerine geçmek gerekir. Türkiye'de genel olarak Ekim sonu ile Kasım başı arasında kış lastiği taktırılması önerilir.
+                            </p>
+                            <p>
+                                Kış lastiklerinin çıkarılması ise Mart sonu veya Nisan başında yapılmalıdır. Hava sıcaklığı sürekli olarak 7 derecenin üzerine çıktıktan sonra yaz lastiklerine dönmek, hem güvenlik hem de lastik ömrü açısından doğru olan zamanlama olacaktır.
+                            </p>
+                            <p>
+                                Türkiye'de 1 Aralık ile 1 Nisan tarihleri arasında ticari araçlar için kış lastiği veya zincir kullanımı zorunludur. Binek araçlarda ise yasal zorunluluk olmamakla birlikte, sigorta şirketleri kazalarda kış lastiği kullanılmamış olması durumunda hasar tazminatını reddedebilir.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="reveal reveal-d1">
+                        <p class="text-[11px] uppercase tracking-[0.2em] text-orange-500 font-medium mb-4">LASTİK SAKLAMA</p>
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tighter leading-tight mb-6">
+                            Lastik Saklama Hizmeti
+                        </h2>
+                        <div class="space-y-4 text-zinc-600 leading-relaxed">
+                            <p>
+                                Mevsim değişikliklerinde çıkardığınız lastikleri uygun koşullarda saklamak, lastik ömrünü uzatmanın en önemli adımıdır. Yanlış depolama, lastiklerin deforme olmasına, kauçuğun erken yaşlanmasına ve performans kaybına yol açar.
+                            </p>
+                            <p>
+                                Yıldırım Oto Lastik olarak, kullanmadığınız mevsimlik lastiklerinizi uygun sıcaklık ve nem ortamında, güneş ışınlarından korunmuş şekilde saklıyoruz. Lastikleriniz bir sonraki mevsime kadar güvenle bizde kalır. Değişim zamanı geldiğinde sizi bilgilendirir, hızlı bir şekilde montaj işlemini gerçekleştiririz.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Markalar -->
+        <section class="py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16 reveal">
+                    <p class="text-[11px] uppercase tracking-[0.2em] text-orange-500 font-medium mb-4">MARKALAR</p>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tighter leading-tight mb-6">
+                        Çalıştığımız Kış Lastiği Markaları
+                    </h2>
+                    <p class="text-zinc-500 leading-relaxed max-w-2xl mx-auto">
+                        Dünyanın en güvenilir lastik markalarının kış serisi ürünlerini stoklarımızda bulunduruyoruz. Aracınızın tipine ve bütçenize uygun en doğru lastiği birlikte seçiyoruz.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-zinc-50 rounded-2xl p-6 md:p-8 text-center border border-zinc-100 reveal">
+                        <p class="text-xl font-bold tracking-tight mb-2">Michelin</p>
+                        <p class="text-sm text-zinc-500">Alpin serisi</p>
+                    </div>
+                    <div class="bg-zinc-50 rounded-2xl p-6 md:p-8 text-center border border-zinc-100 reveal reveal-d1">
+                        <p class="text-xl font-bold tracking-tight mb-2">Bridgestone</p>
+                        <p class="text-sm text-zinc-500">Blizzak serisi</p>
+                    </div>
+                    <div class="bg-zinc-50 rounded-2xl p-6 md:p-8 text-center border border-zinc-100 reveal reveal-d2">
+                        <p class="text-xl font-bold tracking-tight mb-2">Continental</p>
+                        <p class="text-sm text-zinc-500">WinterContact serisi</p>
+                    </div>
+                    <div class="bg-zinc-50 rounded-2xl p-6 md:p-8 text-center border border-zinc-100 reveal reveal-d3">
+                        <p class="text-xl font-bold tracking-tight mb-2">Pirelli</p>
+                        <p class="text-sm text-zinc-500">Cinturato Winter serisi</p>
+                    </div>
+                    <div class="bg-zinc-50 rounded-2xl p-6 md:p-8 text-center border border-zinc-100 reveal">
+                        <p class="text-xl font-bold tracking-tight mb-2">Goodyear</p>
+                        <p class="text-sm text-zinc-500">UltraGrip serisi</p>
+                    </div>
+                    <div class="bg-zinc-50 rounded-2xl p-6 md:p-8 text-center border border-zinc-100 reveal reveal-d1">
+                        <p class="text-xl font-bold tracking-tight mb-2">Lassa</p>
+                        <p class="text-sm text-zinc-500">Snoways serisi</p>
+                    </div>
+                    <div class="bg-zinc-50 rounded-2xl p-6 md:p-8 text-center border border-zinc-100 reveal reveal-d2">
+                        <p class="text-xl font-bold tracking-tight mb-2">Petlas</p>
+                        <p class="text-sm text-zinc-500">Snow Master serisi</p>
+                    </div>
+                    <div class="bg-zinc-50 rounded-2xl p-6 md:p-8 text-center border border-zinc-100 reveal reveal-d3">
+                        <p class="text-xl font-bold tracking-tight mb-2">Hankook</p>
+                        <p class="text-sm text-zinc-500">Winter i*cept serisi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 px-6 bg-orange-500">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tighter text-white mb-4 reveal">
+                    Kış Lastiği İçin Hemen Bizi Arayın
+                </h2>
+                <p class="text-orange-100 text-lg mb-8 reveal">
+                    Aracınıza uygun kış lastiği seçimi ve profesyonel montaj için bize ulaşın. Ücretsiz lastik kontrolü yapıyoruz.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center reveal">
+                    <a href="tel:+905454368124" class="inline-flex items-center justify-center gap-3 px-10 py-4 bg-white text-orange-500 font-bold text-lg rounded-xl hover:bg-orange-50 active:scale-[0.98] transition-all shadow-lg">
+                        <i class="ti ti-phone text-xl"></i>
+                        0 545 436 81 24
+                    </a>
+                    <a href="https://wa.me/905454368124" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white font-medium rounded-xl hover:bg-white/10 active:scale-[0.98] transition-all">
+                        <i class="ti ti-brand-whatsapp text-xl"></i>
+                        WhatsApp ile Yazın
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diğer Hizmetler -->
+        <section class="py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tighter leading-tight mb-12 reveal">Diğer Hizmetlerimiz</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="silivri-yaz-lastigi.html" class="bg-zinc-50 rounded-2xl p-8 border border-zinc-100 hover:bg-zinc-100 transition-colors group reveal">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-orange-500/10 text-orange-500 group-hover:bg-orange-500/20 transition-colors mb-4">
+                            <i class="ti ti-sun text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Yaz Lastiği</h3>
+                        <p class="text-sm text-zinc-500">Yaz lastiği satış ve montaj hizmeti.</p>
+                    </a>
+                    <a href="silivri-lastik-degisimi.html" class="bg-zinc-50 rounded-2xl p-8 border border-zinc-100 hover:bg-zinc-100 transition-colors group reveal reveal-d1">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-orange-500/10 text-orange-500 group-hover:bg-orange-500/20 transition-colors mb-4">
+                            <i class="ti ti-refresh text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Lastik Değişimi</h3>
+                        <p class="text-sm text-zinc-500">Mevsimsel lastik değişimi ve montaj.</p>
+                    </a>
+                    <a href="silivri-rot-balans.html" class="bg-zinc-50 rounded-2xl p-8 border border-zinc-100 hover:bg-zinc-100 transition-colors group reveal reveal-d2">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-orange-500/10 text-orange-500 group-hover:bg-orange-500/20 transition-colors mb-4">
+                            <i class="ti ti-settings text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Rot Balans</h3>
+                        <p class="text-sm text-zinc-500">Profesyonel rot ve balans ayarı.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-900 text-zinc-300 pt-16 pb-6 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <a href="index.html" class="text-xl font-bold text-white">YILDIRIM<span class="text-orange-500">.</span></a>
+                    <p class="text-zinc-400 mt-4 text-sm leading-relaxed">Silivri ve çevresinde 20 yılı aşkın tecrübemizle lastik satış, montaj ve oto servis hizmetleri sunuyoruz.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Hizmetlerimiz</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="silivri-lastik-degisimi.html" class="text-zinc-400 hover:text-orange-400 transition-colors">Lastik Değişimi</a></li>
+                        <li><a href="silivri-rot-balans.html" class="text-zinc-400 hover:text-orange-400 transition-colors">Rot Balans Ayarı</a></li>
+                        <li><a href="silivri-kis-lastigi.html" class="text-zinc-400 hover:text-orange-400 transition-colors">Kış Lastiği</a></li>
+                        <li><a href="silivri-yaz-lastigi.html" class="text-zinc-400 hover:text-orange-400 transition-colors">Yaz Lastiği</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Sayfalar</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="silivri-oto-lastik.html" class="text-zinc-400 hover:text-orange-400 transition-colors">Silivri Oto Lastik</a></li>
+                        <li><a href="silivri-lastikci.html" class="text-zinc-400 hover:text-orange-400 transition-colors">Silivri Lastikçi</a></li>
+                        <li><a href="index.html#hizmetler" class="text-zinc-400 hover:text-orange-400 transition-colors">Hizmetler</a></li>
+                        <li><a href="index.html#iletisim" class="text-zinc-400 hover:text-orange-400 transition-colors">İletişim</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">İletişim</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2"><i class="ti ti-map-pin text-orange-500 mt-0.5"></i><span class="text-zinc-400">Silivri, İstanbul</span></li>
+                        <li class="flex items-center gap-2"><i class="ti ti-phone text-orange-500"></i><a href="tel:+905454368124" class="text-zinc-400 hover:text-orange-400 transition-colors">0 545 436 81 24</a></li>
+                        <li class="flex items-center gap-2"><i class="ti ti-brand-whatsapp text-orange-500"></i><a href="https://wa.me/905454368124" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-orange-400 transition-colors">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-zinc-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
+                <p class="text-zinc-500 text-sm">&copy; 2026 Yıldırım Oto Lastik. Tüm hakları saklıdır.</p>
+                <a href="https://ekeymedya.com" target="_blank" rel="noopener noreferrer" class="text-zinc-500 text-sm hover:text-orange-400 transition-colors">EKEY MEDYA tarafından yapıldı</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/905454368124" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center shadow-lg shadow-orange-500/25 hover:bg-orange-600 active:scale-[0.95] transition-all" aria-label="WhatsApp ile iletişim">
+        <i class="ti ti-brand-whatsapp text-2xl text-white"></i>
+    </a>
+
+    <script>
+        (function() {
+            var menuBtn = document.getElementById('menuBtn');
+            var mobileMenu = document.getElementById('mobileMenu');
+            var menuIcon = document.getElementById('menuIcon');
+
+            menuBtn.addEventListener('click', function() {
+                var isOpen = mobileMenu.classList.contains('menu-open');
+                ;
+                menuIcon.className = isOpen ? 'ti ti-menu-2 text-xl' : 'ti ti-x text-xl';
+            });
+
+            var mobileLinks = document.querySelectorAll('.mobile-link');
+            for (var i = 0; i < mobileLinks.length; i++) {
+                mobileLinks[i].addEventListener('click', function() {
+                    mobileMenu.classList.remove('menu-open');
+                    menuIcon.className = 'ti ti-menu-2 text-xl';
+                });
+            }
+
+            var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (!prefersReducedMotion) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('revealed');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+                var revealEls = document.querySelectorAll('.reveal');
+                for (var j = 0; j < revealEls.length; j++) {
+                    observer.observe(revealEls[j]);
+                }
+            }
+        })();
+    </script>
+</body>
+</html>

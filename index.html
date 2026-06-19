@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yıldırım Oto Lastik | Silivri Lastik ve Oto Servis</title>
+    <meta name="description" content="Silivri'nin güvenilir lastik ve oto servis merkezi. Lastik satış, montaj, balans, rot ayarı ve mevsimsel lastik değişimi hizmetleri.">
+    <meta property="og:title" content="Yıldırım Oto Lastik | Silivri">
+    <meta property="og:description" content="Silivri'de profesyonel lastik satış, montaj ve oto servis hizmetleri.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'system-ui', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                            transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .reveal.revealed {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .reveal-d1 { transition-delay: 100ms; }
+            .reveal-d2 { transition-delay: 200ms; }
+            .reveal-d3 { transition-delay: 300ms; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .reveal { opacity: 1 !important; transform: none !important; }
+        }
+
+        .brand-text {
+            background: linear-gradient(180deg, rgba(24,24,27,0.9) 0%, rgba(113,113,122,0.7) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .video-vignette {
+            background: radial-gradient(
+                ellipse 85% 75% at center,
+                transparent 30%,
+                rgba(255,255,255,0.35) 55%,
+                rgba(255,255,255,0.75) 72%,
+                rgb(255,255,255) 95%
+            );
+            pointer-events: none;
+        }
+
+        #scrollCanvas {
+            object-fit: cover;
+            image-rendering: auto;
+        }
+
+        #mobileMenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+        #mobileMenu.menu-open {
+            max-height: 600px;
+            opacity: 1;
+        }
+        #mobileMenu .mobile-link {
+            opacity: 0;
+            transform: translateX(-12px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        #mobileMenu.menu-open .mobile-link {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        #mobileMenu.menu-open .mobile-link:nth-child(1) { transition-delay: 50ms; }
+        #mobileMenu.menu-open .mobile-link:nth-child(2) { transition-delay: 80ms; }
+        #mobileMenu.menu-open .mobile-link:nth-child(3) { transition-delay: 110ms; }
+        #mobileMenu.menu-open .mobile-link:nth-child(4) { transition-delay: 140ms; }
+        #mobileMenu.menu-open .mobile-link:nth-child(5) { transition-delay: 170ms; }
+        #mobileMenu.menu-open .mobile-link:nth-child(6) { transition-delay: 200ms; }
+        #mobileMenu.menu-open .mobile-link:nth-child(7) { transition-delay: 230ms; }
+        #mobileMenu.menu-open .mobile-link:nth-child(8) { transition-delay: 260ms; }
+        #mobileMenu.menu-open .mobile-link:nth-child(9) { transition-delay: 290ms; }
+        #mobileMenu.menu-open .mobile-link:nth-child(10) { transition-delay: 320ms; }
+    </style>
+</head>
+<body class="bg-white text-zinc-900 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-xl border-b border-zinc-200">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-lg font-bold tracking-tight">
+                YILDIRIM<span class="text-orange-500">.</span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-6">
+                <a href="index.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">Ana Sayfa</a>
+                <a href="hizmetler.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">Hizmetler</a>
+                <a href="silivri-oto-lastik.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">Oto Lastik</a>
+                <a href="silivri-lastik-degisimi.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">Lastik Değişimi</a>
+                <a href="silivri-rot-balans.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">Rot Balans</a>
+                <a href="iletisim.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">İletişim</a>
+                <a href="tel:+905454368124" class="flex items-center gap-2 text-sm font-medium text-orange-500 hover:text-orange-600 transition-colors">
+                    <i class="ti ti-phone text-base"></i>
+                    0 545 436 81 24
+                </a>
+            </div>
+            <button id="menuBtn" class="lg:hidden p-2 text-zinc-500 hover:text-zinc-900 transition-colors" aria-label="Menüyü aç">
+                <i class="ti ti-menu-2 text-xl" id="menuIcon"></i>
+            </button>
+        </div>
+
+        <div id="mobileMenu" class="lg:hidden bg-white/95 backdrop-blur-xl border-b border-zinc-200">
+            <div class="px-6 py-5 flex flex-col gap-5">
+                <a href="index.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors mobile-link">Ana Sayfa</a>
+                <a href="hizmetler.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors mobile-link">Hizmetler</a>
+                <a href="silivri-oto-lastik.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors mobile-link">Oto Lastik</a>
+                <a href="silivri-lastik-degisimi.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors mobile-link">Lastik Değişimi</a>
+                <a href="silivri-rot-balans.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors mobile-link">Rot Balans</a>
+                <a href="silivri-kis-lastigi.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors mobile-link">Kış Lastiği</a>
+                <a href="silivri-yaz-lastigi.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors mobile-link">Yaz Lastiği</a>
+                <a href="silivri-lastikci.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors mobile-link">Lastikçi</a>
+                <a href="iletisim.html" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors mobile-link">İletişim</a>
+                <a href="tel:+905454368124" class="flex items-center gap-2 text-sm font-medium text-orange-500 mobile-link">
+                    <i class="ti ti-phone text-base"></i>
+                    0 545 436 81 24
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- ============ HERO — Scroll-Driven Video ============ -->
+        <section id="heroVideo" class="relative" style="height: 280vh;">
+            <div class="sticky top-0 h-[100dvh] w-full overflow-hidden">
+                <img id="scrollPoster" src="assets/hero-image-v2.png" alt="" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700">
+                <canvas id="scrollCanvas" class="absolute inset-0 w-full h-full"></canvas>
+
+                <div class="video-vignette absolute inset-0 z-[2]"></div>
+
+                <div id="heroContent" class="absolute inset-0 z-10 flex items-center justify-center">
+                    <div class="text-center px-6 py-16 max-w-4xl relative">
+                        <div class="absolute inset-0 -m-8 rounded-3xl" style="background: radial-gradient(ellipse at center, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.2) 50%, transparent 75%);"></div>
+                        <h1 class="relative text-3xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-tight mb-6 text-white" style="text-shadow: 0 2px 30px rgba(0,0,0,0.9), 0 0 60px rgba(0,0,0,0.5);">
+                            Yolda mı kaldınız?<br>
+                            Lastik ihtiyacınız mı var?<br>
+                            Rot veya balans ayarı mı lazım?
+                        </h1>
+                        <p class="relative text-lg md:text-xl text-orange-400 font-semibold mb-10" style="text-shadow: 0 1px 20px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.6);">
+                            İster siz gelin, ister biz.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center relative">
+                            <a
+                                href="tel:+905454368124"
+                                class="inline-flex items-center justify-center gap-3 px-10 py-4 bg-orange-500 text-white font-bold text-lg rounded-xl hover:bg-orange-600 active:scale-[0.98] transition-all shadow-lg shadow-orange-500/30"
+                            >
+                                <i class="ti ti-phone text-xl"></i>
+                                Hemen Ara
+                            </a>
+                            <a
+                                href="#hizmetler"
+                                class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/40 text-white font-medium rounded-xl hover:bg-white/10 active:scale-[0.98] transition-all relative"
+                            >
+                                Hizmetlerimiz
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SERVICES ============ -->
+        <section id="hizmetler" class="py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <p class="text-[11px] uppercase tracking-[0.2em] text-orange-500 font-medium mb-4 reveal">HİZMETLERİMİZ</p>
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tighter leading-none mb-16 reveal">
+                    Her Araca Profesyonel Çözümler
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+                    <div class="md:col-span-7 bg-zinc-50 rounded-2xl p-8 md:p-10 group hover:bg-zinc-100 transition-colors reveal border border-zinc-100">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-orange-500/10 text-orange-500 group-hover:bg-orange-500/20 transition-colors mb-6">
+                            <i class="ti ti-car text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-semibold mb-3">Lastik Satış ve Montaj</h3>
+                        <p class="text-zinc-500 leading-relaxed max-w-[50ch]">
+                            Binek, hafif ticari ve ağır vasıta araçlar için geniş lastik yelpazesi ve profesyonel montaj hizmeti.
+                        </p>
+                    </div>
+
+                    <div class="md:col-span-5 bg-zinc-50 rounded-2xl p-8 md:p-10 group hover:bg-zinc-100 transition-colors reveal reveal-d1 border border-zinc-100">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-orange-500/10 text-orange-500 group-hover:bg-orange-500/20 transition-colors mb-6">
+                            <i class="ti ti-tool text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Balans Ayarı</h3>
+                        <p class="text-zinc-500 leading-relaxed">
+                            Titreşimsiz, konforlu sürüş için hassas bilgisayarlı balans ayarı hizmeti.
+                        </p>
+                    </div>
+
+                    <div class="md:col-span-5 bg-zinc-50 rounded-2xl p-8 md:p-10 group hover:bg-zinc-100 transition-colors reveal border border-zinc-100">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-orange-500/10 text-orange-500 group-hover:bg-orange-500/20 transition-colors mb-6">
+                            <i class="ti ti-settings text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Rot Ayarı</h3>
+                        <p class="text-zinc-500 leading-relaxed">
+                            Lastik ömrünü uzatan, güvenli sürüş sağlayan profesyonel rot ve düz ayarı.
+                        </p>
+                    </div>
+
+                    <div class="md:col-span-7 bg-zinc-50 rounded-2xl p-8 md:p-10 group hover:bg-zinc-100 transition-colors reveal reveal-d1 border border-zinc-100">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-orange-500/10 text-orange-500 group-hover:bg-orange-500/20 transition-colors mb-6">
+                            <i class="ti ti-snowflake text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-semibold mb-3">Mevsimsel Lastik Değişimi</h3>
+                        <p class="text-zinc-500 leading-relaxed max-w-[50ch]">
+                            Yaz ve kış lastiği değişimi. Lastik saklama hizmeti mevcuttur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ BRANDS ============ -->
+        <section class="py-16 px-6 border-y border-zinc-200">
+            <div class="max-w-7xl mx-auto">
+                <p class="text-center text-sm text-zinc-400 mb-10 reveal">Çalıştığımız markalar</p>
+                <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 md:gap-x-14">
+                    <span class="text-xl md:text-2xl font-bold tracking-tight brand-text reveal">Michelin</span>
+                    <span class="text-xl md:text-2xl font-bold tracking-tight brand-text reveal reveal-d1">Bridgestone</span>
+                    <span class="text-xl md:text-2xl font-bold tracking-tight brand-text reveal reveal-d2">Continental</span>
+                    <span class="text-xl md:text-2xl font-bold tracking-tight brand-text reveal reveal-d3">Pirelli</span>
+                    <span class="text-xl md:text-2xl font-bold tracking-tight brand-text reveal">Goodyear</span>
+                    <span class="text-xl md:text-2xl font-bold tracking-tight brand-text reveal reveal-d1">Lassa</span>
+                    <span class="text-xl md:text-2xl font-bold tracking-tight brand-text reveal reveal-d2">Petlas</span>
+                    <span class="text-xl md:text-2xl font-bold tracking-tight brand-text reveal reveal-d3">Hankook</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ ABOUT / STATS ============ -->
+        <section id="hakkimizda" class="py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tighter leading-none mb-6 reveal">
+                    Neden Yıldırım Oto Lastik?
+                </h2>
+                <p class="text-base text-zinc-500 leading-relaxed max-w-[65ch] mb-16 reveal">
+                    2004'ten bu yana Silivri ve çevresine hizmet veriyoruz. Kaliteli ürünler ve uzman kadromuzla güvenli sürüşünüzü sağlıyoruz.
+                </p>
+
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                    <div class="bg-zinc-50 rounded-2xl p-6 md:p-8 text-center reveal border border-zinc-100">
+                        <p class="text-4xl md:text-5xl font-bold text-orange-500 mb-2">20+</p>
+                        <p class="text-sm text-zinc-500">Yıl Tecrübe</p>
+                    </div>
+                    <div class="bg-zinc-50 rounded-2xl p-6 md:p-8 text-center reveal reveal-d1 border border-zinc-100">
+                        <p class="text-4xl md:text-5xl font-bold text-orange-500 mb-2">15K+</p>
+                        <p class="text-sm text-zinc-500">Araç Servisi</p>
+                    </div>
+                    <div class="bg-zinc-50 rounded-2xl p-6 md:p-8 text-center reveal reveal-d2 border border-zinc-100">
+                        <p class="text-4xl md:text-5xl font-bold text-orange-500 mb-2">8</p>
+                        <p class="text-sm text-zinc-500">Premium Marka</p>
+                    </div>
+                    <div class="bg-zinc-50 rounded-2xl p-6 md:p-8 text-center reveal reveal-d3 border border-zinc-100">
+                        <p class="text-4xl md:text-5xl font-bold text-orange-500 mb-2">4.8</p>
+                        <p class="text-sm text-zinc-500">Google Puanı</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ GALLERY (Bento) ============ -->
+        <section id="galeri" class="py-24 px-6 bg-zinc-50">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tighter leading-none mb-16 reveal">
+                    İşimizden Kareler
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 auto-rows-[260px] md:auto-rows-[280px]">
+                    <div class="md:col-span-7 md:row-span-2 rounded-2xl overflow-hidden reveal shadow-sm">
+                        <img src="https://picsum.photos/seed/garagework/800/800" alt="Servis alanı" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy">
+                    </div>
+                    <div class="md:col-span-5 rounded-2xl overflow-hidden reveal reveal-d1 shadow-sm">
+                        <img src="https://picsum.photos/seed/mechanictools/600/400" alt="Lastik montajı" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy">
+                    </div>
+                    <div class="md:col-span-5 rounded-2xl overflow-hidden reveal reveal-d2 shadow-sm">
+                        <img src="https://picsum.photos/seed/wheelservice/600/400" alt="Jant hizmetleri" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy">
+                    </div>
+                    <div class="md:col-span-6 rounded-2xl overflow-hidden reveal shadow-sm">
+                        <img src="https://picsum.photos/seed/autorepair55/700/400" alt="Balans ayarı" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy">
+                    </div>
+                    <div class="md:col-span-6 rounded-2xl overflow-hidden reveal reveal-d1 shadow-sm">
+                        <img src="https://picsum.photos/seed/carshop88/700/400" alt="Müşteri hizmeti" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ TESTIMONIALS ============ -->
+        <section class="py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tighter leading-none mb-16 reveal">
+                    Müşterilerimiz Ne Diyor?
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <blockquote class="bg-zinc-50 rounded-2xl p-8 md:p-10 reveal border border-zinc-100">
+                        <p class="text-lg leading-relaxed text-zinc-700 mb-8">
+                            "Lastik değişimi için gittim, çok ilgili ve güler yüzlü bir ekip. Fiyatlar da gayet uygun. Tavsiye ederim."
+                        </p>
+                        <footer class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-orange-500/15 flex items-center justify-center text-orange-500 font-semibold text-sm flex-shrink-0">MK</div>
+                            <div>
+                                <p class="text-sm font-medium text-zinc-900">Mehmet Kaya</p>
+                                <p class="text-xs text-zinc-400">Silivri</p>
+                            </div>
+                        </footer>
+                    </blockquote>
+
+                    <blockquote class="bg-zinc-50 rounded-2xl p-8 md:p-10 reveal reveal-d1 border border-zinc-100">
+                        <p class="text-lg leading-relaxed text-zinc-700 mb-8">
+                            "Yıllardır lastik ihtiyacımı buradan karşılıyorum. Dürüst, güvenilir ve işini bilen bir ekip."
+                        </p>
+                        <footer class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-orange-500/15 flex items-center justify-center text-orange-500 font-semibold text-sm flex-shrink-0">FY</div>
+                            <div>
+                                <p class="text-sm font-medium text-zinc-900">Fatma Yılmaz</p>
+                                <p class="text-xs text-zinc-400">Büyükçekmece</p>
+                            </div>
+                        </footer>
+                    </blockquote>
+
+                    <blockquote class="bg-zinc-50 rounded-2xl p-8 md:p-10 reveal border border-zinc-100">
+                        <p class="text-lg leading-relaxed text-zinc-700 mb-8">
+                            "Acil lastik patlaması sonrası aradım, hemen yardımcı oldular. Hızlı ve profesyonel bir hizmet aldım."
+                        </p>
+                        <footer class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-orange-500/15 flex items-center justify-center text-orange-500 font-semibold text-sm flex-shrink-0">AÖ</div>
+                            <div>
+                                <p class="text-sm font-medium text-zinc-900">Ali Özdemir</p>
+                                <p class="text-xs text-zinc-400">Çatalca</p>
+                            </div>
+                        </footer>
+                    </blockquote>
+
+                    <blockquote class="bg-zinc-50 rounded-2xl p-8 md:p-10 reveal reveal-d1 border border-zinc-100">
+                        <p class="text-lg leading-relaxed text-zinc-700 mb-8">
+                            "Kış lastiği almak için geldim, ihtiyacıma uygun en doğru markayı önerdiler. Memnun kaldım."
+                        </p>
+                        <footer class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-orange-500/15 flex items-center justify-center text-orange-500 font-semibold text-sm flex-shrink-0">SD</div>
+                            <div>
+                                <p class="text-sm font-medium text-zinc-900">Selin Demir</p>
+                                <p class="text-xs text-zinc-400">Silivri</p>
+                            </div>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section id="iletisim" class="py-24 px-6 bg-zinc-50">
+            <div class="max-w-7xl mx-auto">
+                <p class="text-[11px] uppercase tracking-[0.2em] text-orange-500 font-medium mb-4 reveal">İLETİŞİM</p>
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tighter leading-none mb-16 reveal">
+                    Bize Ulaşın
+                </h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                    <div class="space-y-8 reveal">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-500 flex-shrink-0">
+                                <i class="ti ti-map-pin text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-zinc-400 mb-1">Adres</p>
+                                <p class="text-zinc-700 leading-relaxed">Ortaköy Mah. E-5 Yan Yol Üzeri No:42, 34570 Silivri/İstanbul</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-500 flex-shrink-0">
+                                <i class="ti ti-phone text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-zinc-400 mb-1">Telefon</p>
+                                <a href="tel:+905454368124" class="text-zinc-700 hover:text-orange-500 transition-colors">0 545 436 81 24</a>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-500 flex-shrink-0">
+                                <i class="ti ti-mail text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-zinc-400 mb-1">E-posta</p>
+                                <a href="mailto:info@yildirimotolastik.com" class="text-zinc-700 hover:text-orange-500 transition-colors">info@yildirimotolastik.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-500 flex-shrink-0">
+                                <i class="ti ti-clock text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-zinc-400 mb-1">Çalışma Saatleri</p>
+                                <p class="text-zinc-700">Pazartesi - Cumartesi: 08:00 - 19:00</p>
+                                <p class="text-zinc-700">Pazar: Kapalı</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-500 flex-shrink-0">
+                                <i class="ti ti-brand-whatsapp text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-zinc-400 mb-1">WhatsApp</p>
+                                <a href="https://wa.me/905454368124" target="_blank" rel="noopener noreferrer" class="text-zinc-700 hover:text-orange-500 transition-colors">0 545 436 81 24</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl overflow-hidden bg-zinc-200 min-h-[360px] reveal reveal-d1">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d531.6539316081997!2d28.234924173834422!3d41.08016555025264!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b515fae92be617%3A0x4687189e003a6bb1!2zWcSxbGTEsXLEsW0gT3RvIExhc3Rpaw!5e0!3m2!1str!2str!4v1781836123221!5m2!1str!2str"
+                            class="w-full h-full min-h-[360px]"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Yıldırım Oto Lastik Konum"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-900 text-zinc-300 pt-16 pb-6 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <span class="text-xl font-bold text-white">YILDIRIM<span class="text-orange-500">.</span></span>
+                    <p class="text-zinc-400 mt-4 text-sm leading-relaxed">Silivri ve çevresinde 20 yılı aşkın tecrübemizle lastik satış, montaj ve oto servis hizmetleri sunuyoruz.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Hizmetlerimiz</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="silivri-lastik-degisimi.html" class="text-zinc-400 hover:text-orange-400 transition-colors">Lastik Değişimi</a></li>
+                        <li><a href="silivri-rot-balans.html" class="text-zinc-400 hover:text-orange-400 transition-colors">Rot Balans Ayarı</a></li>
+                        <li><a href="silivri-kis-lastigi.html" class="text-zinc-400 hover:text-orange-400 transition-colors">Kış Lastiği</a></li>
+                        <li><a href="silivri-yaz-lastigi.html" class="text-zinc-400 hover:text-orange-400 transition-colors">Yaz Lastiği</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Sayfalar</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="silivri-oto-lastik.html" class="text-zinc-400 hover:text-orange-400 transition-colors">Silivri Oto Lastik</a></li>
+                        <li><a href="silivri-lastikci.html" class="text-zinc-400 hover:text-orange-400 transition-colors">Silivri Lastikçi</a></li>
+                        <li><a href="index.html#hizmetler" class="text-zinc-400 hover:text-orange-400 transition-colors">Hizmetler</a></li>
+                        <li><a href="index.html#iletisim" class="text-zinc-400 hover:text-orange-400 transition-colors">İletişim</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">İletişim</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2"><i class="ti ti-map-pin text-orange-500 mt-0.5"></i><span class="text-zinc-400">Silivri, İstanbul</span></li>
+                        <li class="flex items-center gap-2"><i class="ti ti-phone text-orange-500"></i><a href="tel:+905454368124" class="text-zinc-400 hover:text-orange-400 transition-colors">0 545 436 81 24</a></li>
+                        <li class="flex items-center gap-2"><i class="ti ti-brand-whatsapp text-orange-500"></i><a href="https://wa.me/905454368124" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-orange-400 transition-colors">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-zinc-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
+                <p class="text-zinc-500 text-sm">&copy; 2026 Yıldırım Oto Lastik. Tüm hakları saklıdır.</p>
+                <a href="https://ekeymedya.com" target="_blank" rel="noopener noreferrer" class="text-zinc-500 text-sm hover:text-orange-400 transition-colors">EKEY MEDYA tarafından yapıldı</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a
+        href="https://wa.me/905454368124"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center shadow-lg shadow-orange-500/25 hover:bg-orange-600 active:scale-[0.95] transition-all"
+        aria-label="WhatsApp ile iletişim"
+    >
+        <i class="ti ti-brand-whatsapp text-2xl text-white"></i>
+    </a>
+
+    <script>
+        (function() {
+            var menuBtn = document.getElementById('menuBtn');
+            var mobileMenu = document.getElementById('mobileMenu');
+            var menuIcon = document.getElementById('menuIcon');
+
+            menuBtn.addEventListener('click', function() {
+                var isOpen = mobileMenu.classList.contains('menu-open');
+                if (isOpen) {
+                    mobileMenu.classList.remove('menu-open');
+                    menuIcon.className = 'ti ti-menu-2 text-xl';
+                } else {
+                    mobileMenu.classList.add('menu-open');
+                    menuIcon.className = 'ti ti-x text-xl';
+                }
+            });
+
+            var mobileLinks = document.querySelectorAll('.mobile-link');
+            for (var i = 0; i < mobileLinks.length; i++) {
+                mobileLinks[i].addEventListener('click', function() {
+                    mobileMenu.classList.remove('menu-open');
+                    menuIcon.className = 'ti ti-menu-2 text-xl';
+                });
+            }
+
+            var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            // Canvas frame-extraction scroll-driven video
+            var canvas = document.getElementById('scrollCanvas');
+            var poster = document.getElementById('scrollPoster');
+            var heroSection = document.getElementById('heroVideo');
+            var heroContent = document.getElementById('heroContent');
+
+            if (canvas && heroSection) {
+                var ctx = canvas.getContext('2d');
+                var frames = [];
+                var ready = false;
+                var target = 0;
+                var smooth = 0;
+                var visible = true;
+                var TOTAL = 50;
+
+                var vid = document.createElement('video');
+                vid.muted = true;
+                vid.playsInline = true;
+                vid.preload = 'auto';
+                var idx = 0;
+
+                vid.addEventListener('loadeddata', function onLoad() {
+                    vid.removeEventListener('loadeddata', onLoad);
+                    canvas.width = vid.videoWidth;
+                    canvas.height = vid.videoHeight;
+                    createImageBitmap(vid).then(function(bmp) {
+                        frames.push(bmp);
+                        ctx.drawImage(bmp, 0, 0, canvas.width, canvas.height);
+                        idx = 1;
+                        nextFrame();
+                    });
+                });
+
+                vid.addEventListener('seeked', function() {
+                    createImageBitmap(vid).then(function(bmp) {
+                        frames.push(bmp);
+                        idx++;
+                        nextFrame();
+                    });
+                });
+
+                function nextFrame() {
+                    if (idx >= TOTAL) {
+                        ready = true;
+                        poster.style.opacity = '0';
+                        setTimeout(function() { poster.remove(); }, 800);
+                        vid.src = '';
+                        vid.load();
+                        return;
+                    }
+                    vid.currentTime = (idx / (TOTAL - 1)) * vid.duration;
+                }
+
+                vid.src = 'assets/hero-video.mp4';
+                vid.load();
+
+                document.addEventListener('scroll', function() {
+                    var rect = heroSection.getBoundingClientRect();
+                    var h = heroSection.offsetHeight - window.innerHeight;
+                    target = Math.min(1, Math.max(0, -rect.top) / h);
+                    visible = rect.bottom > 0;
+                }, { passive: true });
+
+                function render() {
+                    smooth += (target - smooth) * 0.12;
+                    if (Math.abs(target - smooth) < 0.001) smooth = target;
+
+                    if (visible && ready && frames.length > 0) {
+                        var fi = Math.min(frames.length - 1, Math.round(smooth * (frames.length - 1)));
+                        ctx.drawImage(frames[fi], 0, 0, canvas.width, canvas.height);
+                    }
+
+                    if (heroContent) {
+                        var fade = 1 - Math.min(1, smooth * 2.5);
+                        heroContent.style.opacity = Math.max(0, fade);
+                        heroContent.style.transform = 'translateY(' + (smooth * -60) + 'px)';
+                    }
+                    requestAnimationFrame(render);
+                }
+                requestAnimationFrame(render);
+            }
+
+            // Scroll-reveal
+            if (!prefersReducedMotion) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('revealed');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.08,
+                    rootMargin: '0px 0px -40px 0px'
+                });
+
+                var revealEls = document.querySelectorAll('.reveal');
+                for (var j = 0; j < revealEls.length; j++) {
+                    observer.observe(revealEls[j]);
+                }
+            }
+        })();
+    </script>
+</body>
+</html>
