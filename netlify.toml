@@ -1,0 +1,43 @@
+[build]
+  publish = "."
+
+# Pretty URLs - .html olmadan erişim
+[[redirects]]
+  from = "/silivri-oto-lastik"
+  to = "/silivri-oto-lastik.html"
+  status = 200
+
+[[redirects]]
+  from = "/silivri-lastik-degisimi"
+  to = "/silivri-lastik-degisimi.html"
+  status = 200
+
+[[redirects]]
+  from = "/silivri-rot-balans"
+  to = "/silivri-rot-balans.html"
+  status = 200
+
+[[redirects]]
+  from = "/silivri-kis-lastigi"
+  to = "/silivri-kis-lastigi.html"
+  status = 200
+
+[[redirects]]
+  from = "/silivri-yaz-lastigi"
+  to = "/silivri-yaz-lastigi.html"
+  status = 200
+
+[[redirects]]
+  from = "/silivri-lastikci"
+  to = "/silivri-lastikci.html"
+  status = 200
+
+[[redirects]]
+  from = "/hizmetler"
+  to = "/hizmetler.html"
+  status = 200
+
+[[redirects]]
+  from = "/iletisim"
+  to = "/iletisim.html"
+  status = 200
